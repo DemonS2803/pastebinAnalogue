@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Content</title>
+</head>
+<body>
+<h1>Available public content list</h1>
+<a href="content/new">Create new available content</a>
+<br><br>
+<table border="1">
+  <tr th:each="element : ${contentlist}">
+    <td th:text="${element.getTitle()}"></td>
+    <td><a th:href="@{/content/{hash}(hash=${element.getHash()})}">HREF</a></td>
+  </tr>
+</table>
+</body>
+</html>

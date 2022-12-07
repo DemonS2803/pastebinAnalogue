@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UserHome</title>
+</head>
+<body>
+  <h1>Home page</h1>
+  <a href="/content/new">Create new link</a>
+  <table>
+    <tr th:each="element : ${content}">
+      <td th:text="${element.}"></td>
+    </tr>
+  </table>
+</body>
+</html>
